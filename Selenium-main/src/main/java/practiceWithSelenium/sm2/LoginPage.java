@@ -6,9 +6,7 @@ import org.openqa.selenium.support.FindBy;
 import org.openqa.selenium.support.PageFactory;
 import org.openqa.selenium.support.ui.WebDriverWait;
 
-/**
- * @params LoginPage - pattern PageObject -> авторизация странице;
- */
+
 public class LoginPage {
 
 
