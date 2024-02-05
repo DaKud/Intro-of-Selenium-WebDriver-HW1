@@ -25,11 +25,10 @@ public class AbstractTest {
     @BeforeAll
     static void setUp() {
         ChromeOptions chromeOptions = new ChromeOptions();
-        chromeOptions.addArguments("start-maximized"); // режим полного экрана
+        chromeOptions.addArguments("start-maximized");
         chromeOptions.addArguments("incognito");
         driver = new ChromeDriver(chromeOptions);
         driver.manage().timeouts().implicitlyWait(Duration.ofSeconds(10));
-//        wait = new WebDriverWait(driver, Duration.ofSeconds(5));
     }
     @AfterAll
     static void tearDown() {
