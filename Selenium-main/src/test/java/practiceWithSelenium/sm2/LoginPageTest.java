@@ -12,7 +12,7 @@ import java.util.List;
 public class LoginPageTest extends AbstractTest {
 
     @Test
-    @DisplayName("Проверка текста об ошибке в сплывающем окне(разные вариации)")
+    @DisplayName("Проверка текста об ошибке в сплывающем окне")
         // DONE 1
     void getAuthorizationWithOutParams() {
         driver.get("https://test-stand.gb.ru/login");
@@ -21,13 +21,11 @@ public class LoginPageTest extends AbstractTest {
         loginPage.LoginInSystemWithOutParams();
         WebElement checkElement = driver.findElement
                 (By.xpath("//h2[@class='svelte-uwkxn9']"));
-        //      (By.xpath("div[@class='error-block svelte-uwkxn9']/p[contains(text(),'Invalid credentials.')]"));
         Assertions.assertEquals("401", checkElement.getText());
-//    Assertions.assertEquals("Invalid credentials",checkElement.getText());
     }
 
     @Test
-    @DisplayName("Тест на простое изменение имени")
+    @DisplayName("Тест на изменение имени")
     void getDummyNameRewritten() throws InterruptedException {
         driver.get("https://test-stand.gb.ru/login");
         LoginPage loginPage = new LoginPage(driver);
@@ -51,8 +49,8 @@ public class LoginPageTest extends AbstractTest {
         RemakeNamePage remakeNamePage = new RemakeNamePage(driver);
         remakeNamePage.openFirstDummyCardAndSaveNewName("New Dummy2");
         remakeNamePage.openProfile();
-        WebElement webElement = driver.findElement(By.cssSelector("tbody tr td"));
-        Assertions.assertEquals("96751", webElement.getText());
+        WebElement webElement = driver.findElement(By.cssSelector("lilFloppa"));
+        Assertions.assertEquals("97341", webElement.getText());
     }
 
 
@@ -61,15 +59,15 @@ public class LoginPageTest extends AbstractTest {
     void loginTest() throws InterruptedException {
         driver.get("https://test-stand.gb.ru/login");
         LoginPage loginPage = new LoginPage(driver);
-        loginPage.loginInSystem("OOlega", "8b8ea6e167");
-        List<WebElement> searchList = driver.findElements(By.partialLinkText("Hello"));
+        loginPage.loginInSystem("AdEllie", "ed33fb7c8a");
+        List<WebElement> searchList = driver.findElements(By.partialLinkText("Hi"));
         Assertions.assertEquals(1, searchList.size());
 
         MainPage mainPage = new MainPage(driver);
         mainPage.createPost();
 
         List<WebElement> title = driver.findElements(By.xpath("//*[@type='text']"));
-        Assertions.assertEquals(1, title.size());// поиск элемента Title
+        Assertions.assertEquals(1, title.size());
 
         CreatePostPage createPostPage = new CreatePostPage(driver);
         createPostPage.savePost("This is New post created by PageObject", "New PageObject Post");
