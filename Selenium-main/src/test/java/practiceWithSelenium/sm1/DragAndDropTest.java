@@ -40,10 +40,6 @@ public class DragAndDropTest {
                                 .xpath("//img[@src='images/high_tatras_min.jpg']")));
         WebElement boxOfTrash = driver.findElement(By.xpath("//div[@id='trash']"));
 
-//        action.clickAndHold(dragHighTatras).build().perform();
-//        action.moveToElement(boxOfTrash).build().perform();
-//        action.release(boxOfTrash).build().perform();
-
         List<WebElement> boxHasTrash = driver.findElements(By.xpath
                 ("//div[@id='trash']//h5[@class='ui-widget-header']"));
         action.dragAndDrop(dragHighTatras, boxOfTrash).build().perform();
