@@ -17,7 +17,6 @@ public class LoginPageTest extends AbstractTest {
     void getAuthorizationWithOutParams() {
         driver.get("https://test-stand.gb.ru/login");
         LoginPage loginPage = new LoginPage(driver);
-        //  loginPage.loginInSystem("NotCorrect","NotCorrect");
         loginPage.LoginInSystemWithOutParams();
         WebElement checkElement = driver.findElement
                 (By.xpath("//h2[@class='svelte-uwkxn9']"));
