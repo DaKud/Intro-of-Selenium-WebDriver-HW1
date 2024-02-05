@@ -15,8 +15,8 @@ import java.util.List;
 
 public class FirstTaskTest {
     static WebDriver driver;
-    String login = "OOlega";
-    String password = "8b8ea6e167";
+    String login = "AdEllie";
+    String password = "ed33fb7c8a";
     private static WebDriverWait wait;
 
     @BeforeEach
