@@ -52,7 +52,7 @@ public class FirstTaskTest {
         Thread.sleep(5000L);
         buttonNew.click();
 
-        List<WebElement> searchList = driver.findElements(By.partialLinkText("Hello"));
+        List<WebElement> searchList = driver.findElements(By.partialLinkText("Hi"));
         Assertions.assertEquals(1, searchList.size());
     }
 
@@ -71,7 +71,7 @@ public class FirstTaskTest {
         Thread.sleep(5000L);
         loginButtonTwo.click();
 
-        List<WebElement> searchList = driver.findElements(By.partialLinkText("Hello"));
+        List<WebElement> searchList = driver.findElements(By.partialLinkText("Hi"));
         Assertions.assertEquals(1, searchList.size());
     }
 
