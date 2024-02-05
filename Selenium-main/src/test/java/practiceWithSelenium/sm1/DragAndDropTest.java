@@ -24,7 +24,7 @@ public class DragAndDropTest {
     @BeforeEach
     void init() {
         ChromeOptions chromeOptions = new ChromeOptions();
-        chromeOptions.addArguments("--start-maximized"); // режим полного экрана
+        chromeOptions.addArguments("--start-maximized");
         driver = new ChromeDriver(chromeOptions);
         action = new Actions(driver);
         driver.get("https://www.globalsqa.com/demo-site/draganddrop/");
