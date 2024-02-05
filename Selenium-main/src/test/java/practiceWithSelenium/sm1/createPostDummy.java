@@ -16,7 +16,7 @@ public class createPostDummy extends FirstTaskTest {
     WebDriverWait wait;
 
     @Test
-    @DisplayName("Create Dummy with wait")
+    @DisplayName("Create Dummy with delay")
     void createDummyInPage() throws InterruptedException {
         driver.manage().timeouts().implicitlyWait(Duration.ofSeconds(5));
         wait = new WebDriverWait(driver, Duration.ofSeconds(5));
@@ -33,19 +33,11 @@ public class createPostDummy extends FirstTaskTest {
         WebElement titleNew = driver.findElement(By.xpath("//*[@type='text']"));
         titleNew.sendKeys("New Dummy test");
         WebElement descriptionNew = driver.findElement(By.cssSelector("div.field textarea.mdc-text-field__input"));
-        descriptionNew.sendKeys("This is description of new Dummy");
+        descriptionNew.sendKeys("This is new Dummy2");
         WebElement buttonPage = wait.until(ExpectedConditions.
                 visibilityOfElementLocated(By.xpath("//*[@type='submit']")));
         buttonPage.click();
         List<WebElement> elementsDummy = driver.findElements(By.xpath("//h1[@class='svelte-tv8alb']"));
         Assertions.assertEquals("New Dummy test",elementsDummy.get(0).getText());
-//        File screenshot = ((TakesScreenshot)driver).getScreenshotAs(OutputType.FILE);
-//        try{
-//            FileUtils.copyFile =(screenshot,new File("\\src\\test\\resources\\screenshotDummy.png"));
-//
-//        } catch (IOException exception){
-//            exception.printStackTrace();
-//
-//        }
     }
 }
