@@ -32,8 +32,7 @@ public class FirstTaskTest {
     @Disabled
     void test() throws InterruptedException {
         ChromeOptions chromeOptions = new ChromeOptions();
-        chromeOptions.addArguments("--start-maximized"); // режим полного экрана
-//        chromeOptions.addArguments("--headless"); // без запуска UI браузера
+        chromeOptions.addArguments("--start-maximized"); 
         WebDriver driver = new ChromeDriver(chromeOptions);
         driver.get("https://test-stand.gb.ru/login");
         Thread.sleep(5000L);
@@ -47,9 +46,6 @@ public class FirstTaskTest {
         WebElement passwordNew = driver.findElement(By.xpath("//*[@type='password']"));
         WebElement buttonNew = driver.findElement(By.xpath("//*[@class='mdc-button__label']"));
 
-//        WebElement usernameField = driver.findElement(By.cssSelector("form#login input[type='text']"));
-//        WebElement passwordField = driver.findElement(By.cssSelector("form#login input[type='password']"));
-        //  WebElement loginButton = driver.findElement(By.cssSelector("form#login button"));
 
         loginNew.sendKeys(login);
         passwordNew.sendKeys(password);
