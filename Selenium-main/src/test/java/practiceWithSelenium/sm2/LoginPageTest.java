@@ -41,7 +41,7 @@ public class LoginPageTest extends AbstractTest {
     }
 
     @Test
-    @DisplayName("Тест на проверку Id измененного названия заголовка")
+    @DisplayName("Тест проверки ID измененного названия заголовка")
     void getDummyIDRewritten() throws InterruptedException {
         driver.get("https://test-stand.gb.ru/login");
         LoginPage loginPage = new LoginPage(driver);
