@@ -8,9 +8,7 @@ import org.openqa.selenium.support.PageFactory;
 
 import java.util.List;
 
-/**
- * @params ElementPage - отдельный случай PageObject;
- */
+
 public class ElementPage {
     @FindBy(xpath = "//button")
     List<WebElement> elements;
