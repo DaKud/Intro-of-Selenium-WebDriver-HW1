@@ -12,7 +12,7 @@ import java.time.Duration;
 public class AbstractTest {
     public static WebDriver driver;
     public static WebDriverWait wait;
-    private static String login = "OOlega";
+    private static String login = "AdEllie";
 
     public static String getLogin() {
         return login;
@@ -20,7 +20,7 @@ public class AbstractTest {
     public static String getPassword() {
         return password;
     }
-    private static String password = "8b8ea6e167";
+    private static String password = "ed33fb7c8a";
 
     @BeforeAll
     static void setUp() {
