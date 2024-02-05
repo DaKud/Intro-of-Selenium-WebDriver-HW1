@@ -22,7 +22,7 @@ public class FirstTaskTest {
     @BeforeEach
     void init() {
         ChromeOptions chromeOptions = new ChromeOptions();
-        chromeOptions.addArguments("--start-maximized"); // режим полного экрана
+        chromeOptions.addArguments("--start-maximized");
         driver = new ChromeDriver(chromeOptions);
         driver.get("https://test-stand.gb.ru/login");
         driver.manage().timeouts().implicitlyWait(Duration.ofSeconds(10));
