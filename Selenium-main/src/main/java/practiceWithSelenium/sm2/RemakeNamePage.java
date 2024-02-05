@@ -28,12 +28,12 @@ public class RemakeNamePage {
     }
 
     public void openFirstDummyCardAndSaveNewName(String name) throws InterruptedException {
-        firstDummy.click();              // кликнули на первую карточку и открыли
+        firstDummy.click();             
         Thread.sleep(5000L);
-        dummyButtonEditPost.click();     // кликнули на кнопку для изменения имени
-        fieldToTitle.clear();            // очистили поле имени
-        fieldToTitle.sendKeys(name);     // добавили новое имя
-        saveButton.click();              // сохранили
+        dummyButtonEditPost.click();    
+        fieldToTitle.clear();          
+        fieldToTitle.sendKeys(name);    
+        saveButton.click();             
     }
 
     public void openProfile() throws InterruptedException {
